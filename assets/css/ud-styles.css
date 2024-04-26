@@ -867,7 +867,8 @@ p {
 @media only screen and (min-width: 1268px) and (max-width: 1591px), (max-width: 1267px) {
   .ud-about-image {
     text-align: center;
-    margin: 50px;
+    margin-top: 80px;
+    margin-right: 50px;
   }
 }
 
