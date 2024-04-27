@@ -1230,11 +1230,11 @@
         console.log("start sendEmail");
         try {
           Email.send({
-            SecureToken : "EFFEA9AF-E971-AA70-63A2-A16D46535F1D0163",
+            SecureToken : "b7e7cde9-6b67-4d03-a90e-8aafc2fa22ac",
             To : 'v2.softwarehouse@gmail.com',
-            From : escape(document.getElementById('email').value),
-            Subject : escape("Contato:Site Ode ") + escape(document.getElementById('fullName').value),
-            Body : escape(document.getElementById('message').value)
+            From : 'v2.softwarehouse@gmail.com',
+            Subject : "test",
+            Body : "test"
           }).then(
             message => alert(message)
           );
