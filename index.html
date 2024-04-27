@@ -1229,11 +1229,13 @@
 
       function sendEmail() {
         Email.send({
-          SecureToken : "dcf32074-c67c-4a91-8893-e727b6334e6a",
+          Host : "smtp.elasticemail.com",
+          Username : "caioschristino@gmail.com",
+          Password : "E19124FF153E39D630566F0BEA27D39E9E30",
           To : 'v2.softwarehouse@gmail.com',
-          From : 'v2.softwarehouse@gmail.com',
-          Subject : 'This is the subject',
-          Body : 'And this is the body'
+          From : "v2.softwarehouse@gmail.com",
+          Subject : "This is the subject",
+          Body : "And this is the body"
         }).then(function (message) {
             alert(message)
         }).catch(function (e) {
