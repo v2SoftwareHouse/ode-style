@@ -404,18 +404,14 @@
             <button class="tablink" onclick="openPage('TypeScript', this, 'primary-color')">TypeScript</button>
 
             <div id="Java" class="tabcontent">
-              <pre>
-                <code>
-                  <p>class GETUseCase(private val repo: UseCaseRepository) 
-                    : UseCase() {
+              <p>class GETUseCase(private val repo: UseCaseRepository) :
+                UseCase() {
                   
-                        override fun execute(param: String?): Output {
-                            val pokemon = repo.doFetch(param)
-                            return ValueOutput(pokemon)
-                        }
-                    }</p>
-                </code>
-                </pre>
+                  override fun execute(param: String?): Output {
+                    val pokemon = repo.doFetch(param)
+                    return ValueOutput(pokemon)
+                  }
+                }</p>
             </div>
 
             <div id="Python" class="tabcontent">
