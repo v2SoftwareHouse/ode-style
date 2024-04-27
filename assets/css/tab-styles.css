@@ -30,7 +30,7 @@ body, html {
   height: 100%;
 }
 
-#Home {background-color: white;}
-#News {background-color: white;}
-#Contact {background-color: white;}
-#About {background-color: white;}
+#Home {background-color: var(--primary-color);}
+#News {background-color: var(--primary-color);}
+#Contact {background-color: var(--primary-color);}
+#About {background-color: var(--primary-color);}
