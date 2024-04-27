@@ -421,14 +421,13 @@
             <div id="Python" class="tabcontent">
               <pre>
                 <code>
-<p style="text-align: left;">class GETUseCase(private val repo: UseCaseRepository) : 
-  UseCase() {
-    
-    override fun execute(param: String?): Output {
-      val pokemon = repo.doFetch(param)
-      return ValueOutput(pokemon)
-    }
-  }</p>
+<p style="text-align: left;">class GETAPIUseCase(UseCase[str, Any]):
+def __init__(self, repo: RepositoryAPI):
+    self.repo = repo
+
+def execute(self, param: str) -> Output[Any]:
+    unit = self.repo.do_fetch(param)
+    return ValueOutput(unit)</p>
                 </code>
               </pre>
             </div>
@@ -436,14 +435,20 @@
             <div id="CSharp" class="tabcontent">
               <pre>
                 <code>
-<p style="text-align: left;">class GETUseCase(private val repo: UseCaseRepository) : 
-  UseCase() {
-    
-    override fun execute(param: String?): Output {
-      val pokemon = repo.doFetch(param)
-      return ValueOutput(pokemon)
+<p style="text-align: left;">public class UnitGET : UseCase
+{
+    UnitRepository repo { get; set; }
+
+    public UnitGET(UnitRepository repo) : base() {
+        this.repo = repo;
     }
-  }</p>
+
+    public override Output execute(string param)
+    {
+        var fetch = repo.doFetch();
+        return new ValueOutput(fetch);
+    }
+}</p>
                 </code>
               </pre>
             </div>
@@ -451,14 +456,18 @@
             <div id="Swift" class="tabcontent">
               <pre>
                 <code>
-<p style="text-align: left;">class GETUseCase(private val repo: UseCaseRepository) : 
-  UseCase() {
-    
-    override fun execute(param: String?): Output {
-      val pokemon = repo.doFetch(param)
-      return ValueOutput(pokemon)
-    }
-  }</p>
+<p style="text-align: left;">class GETUseCase : UseCase {
+  var repo: UseCaseRepository
+  
+  init(repo: UseCaseRepository) {
+      self.repo = repo
+  }
+  
+  override func execute(param: String?) -> Output {
+      let pokemon = repo.doFetch(name: param)
+      return ValueOutput(value: pokemon)
+  }
+}</p>
                 </code>
               </pre>
             </div>
@@ -466,14 +475,18 @@
             <div id="TypeScript" class="tabcontent">
               <pre>
                 <code>
-<p style="text-align: left;">class GETUseCase(private val repo: UseCaseRepository) : 
-  UseCase() {
-    
-    override fun execute(param: String?): Output {
-      val pokemon = repo.doFetch(param)
-      return ValueOutput(pokemon)
-    }
-  }</p>
+<p style="text-align: left;">class GETAPIUseCase implements UseCase {
+  private repo: RepositoryAPI;
+
+  constructor(repo: RepositoryAPI) {
+      this.repo = repo;
+  }
+
+  execute(param: string): Output {
+      const unit = this.repo.do_fetch(param);
+      return new ValueOutput(unit);
+  }
+}</p>
                 </code>
               </pre>
             </div>
