@@ -404,14 +404,18 @@
             <button class="tablink" onclick="openPage('JavaScript', this, 'primary-color')">JavaScript</button>
 
             <div id="Java" class="tabcontent">
-              <code>class GETUseCase(private val repo: UseCaseRepository) <br /> 
-                : UseCase<String, Any>() { <br />
-            
-                  override fun execute(param: String?): Output<Any> { <br />
-                      val data = repo.doFetch(param) <br />
-                      return ValueOutput(data) <br />
-                  } <br />
-              }</code>
+              <pre>
+                <code>
+                  class GETUseCase(private val repo: UseCaseRepository) 
+                  : UseCase<String, Pokemon>() {
+                
+                      override fun execute(param: String?): Output<Pokemon> {
+                          val pokemon = repo.doFetch(param)
+                          return ValueOutput(pokemon)
+                      }
+                  }
+                </code>
+                </pre>
             </div>
 
             <div id="Python" class="tabcontent">
