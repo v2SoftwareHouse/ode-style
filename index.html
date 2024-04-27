@@ -422,12 +422,12 @@
               <pre>
                 <code>
 <p style="text-align: left;">class GETAPIUseCase(UseCase[str, Any]):
-def __init__(self, repo: RepositoryAPI):
-    self.repo = repo
+  def __init__(self, repo: RepositoryAPI):
+      self.repo = repo
 
-def execute(self, param: str) -> Output[Any]:
-    unit = self.repo.do_fetch(param)
-    return ValueOutput(unit)</p>
+  def execute(self, param: str) -> Output[Any]:
+      unit = self.repo.do_fetch(param)
+      return ValueOutput(unit)</p>
                 </code>
               </pre>
             </div>
