@@ -1227,15 +1227,23 @@
       window.document.getElementById("defaultOpen").click();
 
       function sendEmail() {
-        Email.send({
+        try {
+          Email.send({
             SecureToken : "b7e7cde9-6b67-4d03-a90e-8aafc2fa22ac",
             To : 'v2.softwarehouse@gmail.com',
             From : escape(document.getElementById('email').value),
             Subject : escape("Contato:Site Ode ") + escape(document.getElementById('fullName').value),
             Body : escape(document.getElementById('message').value)
-        }).then(
-          message => alert(message)
-        );
+          }).then(
+            message => alert(message)
+          );
+        } catch (error) {
+          console.error(error);
+          // Expected output: ReferenceError: nonExistentFunction is not defined
+          // (Note: the exact output may be browser-dependent)
+        }
+
+        
     }
     </script>
   </body>
