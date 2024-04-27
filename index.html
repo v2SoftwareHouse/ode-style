@@ -1062,7 +1062,7 @@
                   <input
                     type="text"
                     name="phone"
-                    placeholder="+885 1254 5211 552"
+                    placeholder="+55 183653-8220"
                   />
                 </div>
                 <div class="ud-form-group">
@@ -1074,7 +1074,7 @@
                   ></textarea>
                 </div>
                 <div class="ud-form-group mb-0">
-                  <button type="submit" onclick="sendMail(); return false" class="ud-main-btn">
+                  <button type="submit" onclick="sendEmail(); return false" class="ud-main-btn">
                     Enviar Menssagem
                   </button>
                 </div>
@@ -1159,6 +1159,7 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
       // ==== for menu scroll
       const pageLink = document.querySelectorAll(".ud-menu-scroll");
@@ -1225,14 +1226,19 @@
       // Get the element with id="defaultOpen" and click on it
       window.document.getElementById("defaultOpen").click();
 
-      function sendMail() {
-          var link = "mailto:v2.softwarehouses@gmail.com"
-                  + "&subject=" + escape("Contato:Site Ode") +" De:"+ escape(document.getElementById('fullName').value) +":"+ escape(document.getElementById('email').value)
-                  + "&body=" + escape(document.getElementById('message').value)
-          ;
-
-          window.location.href = link;
-      }
+      function sendEmail() {
+        Email.send({
+          Host : "smtp.elasticemail.com",
+          Username : "v2.softwarehouse@gmail.com",
+          Password : "EFFEA9AFE971AA7063A2A16D46535F1D0163",
+          To : 'v2.softwarehouse@gmail.com',
+          From : escape(document.getElementById('email').value),
+          Subject : escape("Contato:Site Ode ") + escape(document.getElementById('fullName').value),
+          Body : escape(document.getElementById('message').value)
+      }).then(
+        message => alert(message)
+      );
+    }
     </script>
   </body>
 </html>
