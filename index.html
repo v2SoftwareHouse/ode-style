@@ -410,8 +410,8 @@
   UseCase() {
     
     override fun execute(param: String?): Output {
-      val pokemon = repo.doFetch(param)
-      return ValueOutput(pokemon)
+      val data = repo.doFetch(param)
+      return ValueOutput(data)
     }
   }</p>
                 </code>
@@ -421,13 +421,13 @@
             <div id="Python" class="tabcontent">
               <pre>
                 <code>
-<p style="text-align: left;">class GETAPIUseCase(UseCase[str, Any]):
-  def __init__(self, repo: RepositoryAPI):
+<p style="text-align: left;">class GETUseCase(UseCase[str, Any]):
+  def __init__(self, repo: UseCaseRepository):
       self.repo = repo
 
   def execute(self, param: str) -> Output[Any]:
-      unit = self.repo.do_fetch(param)
-      return ValueOutput(unit)
+      data = self.repo.do_fetch(param)
+      return ValueOutput(data)
 </p>
                 </code>
               </pre>
@@ -436,18 +436,18 @@
             <div id="CSharp" class="tabcontent">
               <pre>
                 <code>
-<p style="text-align: left;">public class UnitGET : UseCase
+<p style="text-align: left;">public class GETUseCase : UseCase
 {
-    UnitRepository repo { get; set; }
+    UseCaseRepository repo { get; set; }
 
-    public UnitGET(UnitRepository repo) : base() {
+    public GETUseCase(UseCaseRepository repo) : base() {
         this.repo = repo;
     }
 
     public override Output execute(string param)
     {
-        var fetch = repo.doFetch();
-        return new ValueOutput(fetch);
+        var data = repo.doFetch();
+        return new ValueOutput(data);
     }
 }</p>
                 </code>
@@ -465,8 +465,8 @@
   }
   
   override func execute(param: String?) -> Output {
-      let pokemon = repo.doFetch(name: param)
-      return ValueOutput(value: pokemon)
+      let data = repo.doFetch(name: param)
+      return ValueOutput(value: data)
   }
 }</p>
                 </code>
@@ -476,16 +476,16 @@
             <div id="TypeScript" class="tabcontent">
               <pre>
                 <code>
-<p style="text-align: left;">class GETAPIUseCase implements UseCase {
-  private repo: RepositoryAPI;
+<p style="text-align: left;">class GETUseCase implements UseCase {
+  private repo: UseCaseRepository;
 
-  constructor(repo: RepositoryAPI) {
+  constructor(repo: UseCaseRepository) {
       this.repo = repo;
   }
 
   execute(param: string): Output {
-      const unit = this.repo.do_fetch(param);
-      return new ValueOutput(unit);
+      const data = this.repo.do_fetch(param);
+      return new ValueOutput(data);
   }
 }</p>
                 </code>
