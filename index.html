@@ -1229,7 +1229,7 @@
       $(document).ready(function() {
         $('#send').click(function() {
           try {
-            window.alert("start send");
+            
             Email.send({
               SecureToken : "b7e7cde9-6b67-4d03-a90e-8aafc2fa22ac ",
               To : 'v2.softwarehouse@gmail.com',
@@ -1240,7 +1240,7 @@
               message => alert(message)
             );
           } catch (error) {
-            window.alert("error send");
+            
           }
         });
       }
