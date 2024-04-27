@@ -1074,7 +1074,7 @@
                   ></textarea>
                 </div>
                 <div class="ud-form-group mb-0">
-                  <button type="submit" onclick="sendEmail()" class="ud-main-btn">
+                  <button type="submit" value="send" class="ud-main-btn">
                     Enviar Menssagem
                   </button>
                 </div>
@@ -1226,21 +1226,19 @@
       // Get the element with id="defaultOpen" and click on it
       window.document.getElementById("defaultOpen").click();
 
-      function sendEmail() {
-        console.log("start sendEmail");
-        try {
+      $(document).ready(function() {
+        $('#send').click(function() {
           Email.send({
-            SecureToken : "9d332450-e278-4fef-ac2a-63003f4f6b35 ",
-            To : 'juan.cantero.jarilla@gmail.com',
-            From : "juan.cantero.jarilla@gmail.com",
+            SecureToken : "b7e7cde9-6b67-4d03-a90e-8aafc2fa22ac ",
+            To : 'v2.softwarehouse@gmail.com',
+            From : "v2.softwarehouse@gmail.com",
             Subject : "This is the subject",
             Body : "And this is the body"
-        }).then(
-          message => alert(message)
-        );
-
-        
-    }
+          }).then(
+            message => alert(message)
+          );
+        });
+      }
     </script>
   </body>
 </html>
