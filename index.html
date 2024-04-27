@@ -406,14 +406,14 @@
             <div id="Java" class="tabcontent">
               <pre>
                 <code>
-                  class GETUseCase(private val repo: UseCaseRepository) 
+                  <p>class GETUseCase(private val repo: UseCaseRepository) 
                   : UseCase<String, Pokemon>() {
-                
+
                       override fun execute(param: String?): Output<Pokemon> {
                           val pokemon = repo.doFetch(param)
                           return ValueOutput(pokemon)
                       }
-                  }
+                  }</p>
                 </code>
                 </pre>
             </div>
