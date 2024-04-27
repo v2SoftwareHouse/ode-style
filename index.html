@@ -1074,7 +1074,7 @@
                   ></textarea>
                 </div>
                 <div class="ud-form-group mb-0">
-                  <button type="submit" class="ud-main-btn">
+                  <button type="submit" onclick="sendMail(); return false" class="ud-main-btn">
                     Enviar Menssagem
                   </button>
                 </div>
@@ -1224,6 +1224,15 @@
 
       // Get the element with id="defaultOpen" and click on it
       window.document.getElementById("defaultOpen").click();
+
+      function sendMail() {
+          var link = "mailto:v2.softwarehouses@gmail.com"
+                  + "&subject=" + escape("Contato:Site Ode") +" De:"+ escape(document.getElementById('fullName').value) +":"+ escape(document.getElementById('email').value)
+                  + "&body=" + escape(document.getElementById('message').value)
+          ;
+
+          window.location.href = link;
+      }
     </script>
   </body>
 </html>
