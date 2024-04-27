@@ -404,14 +404,16 @@
             <button class="tablink" onclick="openPage('JavaScript', this, 'primary-color')">JavaScript</button>
 
             <div id="Java" class="tabcontent">
-              <code>class GETUseCase(private val repo: UseCaseRepository) 
-                : UseCase<String, Any>() {
+              <pre>
+                <code>class GETUseCase(private val repo: UseCaseRepository) 
+                  : UseCase<String, Any>() {
               
                     override fun execute(param: String?): Output<Any> {
                         val data = repo.doFetch(param)
                         return ValueOutput(data)
                     }
                 }</code>
+              </pre>
             </div>
 
             <div id="Python" class="tabcontent">
