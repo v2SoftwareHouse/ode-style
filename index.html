@@ -1230,18 +1230,14 @@
         console.log("start sendEmail");
         try {
           Email.send({
-            SecureToken : "9d332450-e278-4fef-ac2a-63003f4f6b35",
-            To : 'v2.softwarehouse@gmail.com',
-            From : 'v2.softwarehouse@gmail.com',
-            Subject : "test",
-            Body : "test"
-          }).then(
-            message => alert(message)
-          );
-          console.log("sended email");
-        } catch (error) {
-          console.log(error);
-        }
+            SecureToken : "9d332450-e278-4fef-ac2a-63003f4f6b35 ",
+            To : 'juan.cantero.jarilla@gmail.com',
+            From : "juan.cantero.jarilla@gmail.com",
+            Subject : "This is the subject",
+            Body : "And this is the body"
+        }).then(
+          message => alert(message)
+        );
 
         
     }
