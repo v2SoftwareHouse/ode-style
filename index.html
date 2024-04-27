@@ -1228,16 +1228,14 @@
 
       function sendEmail() {
         Email.send({
-          Host : "smtp.elasticemail.com",
-          Username : "v2.softwarehouse@gmail.com",
-          Password : "EFFEA9AFE971AA7063A2A16D46535F1D0163",
-          To : 'v2.softwarehouse@gmail.com',
-          From : escape(document.getElementById('email').value),
-          Subject : escape("Contato:Site Ode ") + escape(document.getElementById('fullName').value),
-          Body : escape(document.getElementById('message').value)
-      }).then(
-        message => alert(message)
-      );
+            SecureToken : "EFFEA9AFE971AA7063A2A16D46535F1D0163",
+            To : 'v2.softwarehouse@gmail.com',
+            From : escape(document.getElementById('email').value),
+            Subject : escape("Contato:Site Ode ") + escape(document.getElementById('fullName').value),
+            Body : escape(document.getElementById('message').value)
+        }).then(
+          message => alert(message)
+        );
     }
     </script>
   </body>
