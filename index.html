@@ -1227,21 +1227,18 @@
       window.document.getElementById("defaultOpen").click();
 
       function sendEmail() {
-         try {
-          window.alert("start sendEmail");
-          Email.send({
-              SecureToken : "dcf32074-c67c-4a91-8893-e727b6334e6a",
-              To : 'v2.softwarehouse@gmail.com',
-              From : 'v2.softwarehouse@gmail.com',
-              Subject : 'This is the subject',
-              Body : 'And this is the body'
-            }).then(
-              message => alert(message)
-            );
-          } catch (error) {
-            window.alert("error sendEmail");
-          }
-        }
+        Email.send({
+          SecureToken : "dcf32074-c67c-4a91-8893-e727b6334e6a",
+          To : 'v2.softwarehouse@gmail.com',
+          From : 'v2.softwarehouse@gmail.com',
+          Subject : 'This is the subject',
+          Body : 'And this is the body'
+        }).then(
+          message => alert(message)
+        ).catch(function (e) {
+          window.alert(e);
+        });
+      }
     </script>
   </body>
 </html>
