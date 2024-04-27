@@ -864,7 +864,7 @@ p {
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
-@media only screen and (min-width: 1968px) and (max-width: 2391px), (max-width: 1967px) {
+@media only screen and (min-width: 1768px) and (max-width: 2091px), (max-width: 1767px) {
   .ud-about-image {
     text-align: left;
     margin-top: 80px;
