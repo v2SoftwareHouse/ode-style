@@ -404,6 +404,7 @@
             <button class="tablink" onclick="openPage('TypeScript', this, 'primary-color')">TypeScript</button>
 
             <div id="Java" class="tabcontent">
+              <pre>
                 <code>
                   <p style="text-align: left;">
 class GETUseCase(private val repo: UseCaseRepository) : 
@@ -415,50 +416,71 @@ class GETUseCase(private val repo: UseCaseRepository) :
     }
   }</p>
                 </code>
+              </pre>
             </div>
 
             <div id="Python" class="tabcontent">
-              <!-- <code>class GETUseCase(private val repo: UseCaseRepository) 
-                : UseCase<String, Pokemon>() {
-              
-                    override fun execute(param: String?): Output<Pokemon> {
-                        val pokemon = repo.doFetch(param)
-                        return ValueOutput(pokemon)
-                    }
-                }</code> -->
+              <pre>
+                <code>
+<p style="text-align: left;">
+class GETUseCase(private val repo: UseCaseRepository) : 
+  UseCase() {
+    
+    override fun execute(param: String?): Output {
+      val pokemon = repo.doFetch(param)
+      return ValueOutput(pokemon)
+    }
+  }</p>
+                </code>
+              </pre>
             </div>
 
             <div id="CSharp" class="tabcontent">
-              <!-- <code>class GETUseCase(private val repo: UseCaseRepository) 
-                : UseCase<String, Pokemon>() {
-              
-                    override fun execute(param: String?): Output<Pokemon> {
-                        val pokemon = repo.doFetch(param)
-                        return ValueOutput(pokemon)
-                    }
-                }</code> -->
+              <pre>
+                <code>
+<p style="text-align: left;">
+class GETUseCase(private val repo: UseCaseRepository) : 
+  UseCase() {
+    
+    override fun execute(param: String?): Output {
+      val pokemon = repo.doFetch(param)
+      return ValueOutput(pokemon)
+    }
+  }</p>
+                </code>
+              </pre>
             </div>
 
             <div id="Swift" class="tabcontent">
-              <!-- <code>class GETUseCase(private val repo: UseCaseRepository) 
-                : UseCase<String, Pokemon>() {
-              
-                    override fun execute(param: String?): Output<Pokemon> {
-                        val pokemon = repo.doFetch(param)
-                        return ValueOutput(pokemon)
-                    }
-                }</code> -->
+              <pre>
+                <code>
+<p style="text-align: left;">
+class GETUseCase(private val repo: UseCaseRepository) : 
+  UseCase() {
+    
+    override fun execute(param: String?): Output {
+      val pokemon = repo.doFetch(param)
+      return ValueOutput(pokemon)
+    }
+  }</p>
+                </code>
+              </pre>
             </div>
 
             <div id="TypeScript" class="tabcontent">
-              <!-- <code>class GETUseCase(private val repo: UseCaseRepository) 
-                : UseCase<String, Pokemon>() {
-              
-                    override fun execute(param: String?): Output<Pokemon> {
-                        val pokemon = repo.doFetch(param)
-                        return ValueOutput(pokemon)
-                    }
-                }</code> -->
+              <pre>
+                <code>
+<p style="text-align: left;">
+class GETUseCase(private val repo: UseCaseRepository) : 
+  UseCase() {
+    
+    override fun execute(param: String?): Output {
+      val pokemon = repo.doFetch(param)
+      return ValueOutput(pokemon)
+    }
+  }</p>
+                </code>
+              </pre>
             </div>
           </div>
         </div>
