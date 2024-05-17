@@ -27,8 +27,8 @@ body, html {
   color: white;
   display: flex;
   padding: 100px 20px;
-  height: 100%;
-  width: auto;
+  height: max-content;
+  width: max-content;
 }
 
 #Java {background-color: white;}
