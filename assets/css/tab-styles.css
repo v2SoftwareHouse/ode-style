@@ -26,9 +26,8 @@ body, html {
 .tabcontent {
   color: white;
   display: flex;
-  padding: 100px 20px;
-  height: max-content;
-  width: max-content;
+  height: fit-content;
+  width: fit-content;
 }
 
 #Java {background-color: white;}
