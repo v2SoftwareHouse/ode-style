@@ -9,7 +9,7 @@ body, html {
 .tablink {
   background-color: #556ec2;
   color: white;
-  float: center;
+  float: left;
   border: none;
   outline: none;
   cursor: pointer;
@@ -26,6 +26,7 @@ body, html {
 .tabcontent {
   color: white;
   display: flex;
+  padding: 100px 20px;
   height: 100%;
   width: auto;
 }
