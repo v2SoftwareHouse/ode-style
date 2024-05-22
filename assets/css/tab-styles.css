@@ -1,23 +1,28 @@
 .tabs-code {
   max-width: 538px;
 }
+
 .tabs-nav-code li {
   float: left;
   width: 50%;
 }
+
 .tabs-nav-code li:first-child a {
   border-right: 0;
   border-top-left-radius: 6px;
 }
+
 .tabs-nav-code li:last-child a {
   border-top-right-radius: 6px;
 }
+
 .tab-active-code a {
   background: #fff;
   border-bottom-color: transparent;
   color: #2db34a;
   cursor: default;
 }
+
 .tabs-stage-code {
   border: 1px solid #cecfd5;
   border-radius: 0 0 6px 6px;
