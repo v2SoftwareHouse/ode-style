@@ -364,66 +364,46 @@
           <div style="padding: 7px; width: 70%;">
             <div class="w3-container" style="width: fit-content;">
               <div class="w3-row">
-                <a href="javascript:void(0)" onclick="openCity(event, 'London');">
-                  <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">London</div>
+                <a href="javascript:void(0)" onclick="openPage(event, 'Kotlin');">
+                  <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Kotlin</div>
                 </a>
-                <a href="javascript:void(0)" onclick="openCity(event, 'Paris');">
-                  <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Paris</div>
+                <a href="javascript:void(0)" onclick="openPage(event, 'Swift');">
+                  <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Swift</div>
                 </a>
-                <a href="javascript:void(0)" onclick="openCity(event, 'Tokyo');">
-                  <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Tokyo</div>
+                <a href="javascript:void(0)" onclick="openPage(event, 'Python');">
+                  <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Python</div>
+                </a>
+                <a href="javascript:void(0)" onclick="openPage(event, 'CSharp');">
+                  <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">C#</div>
+                </a>
+                <a href="javascript:void(0)" onclick="openPage(event, 'TScript');">
+                  <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">TypeScript</div>
                 </a>
               </div>
             
-              <div id="London" class="w3-container city" style="display:none">
+              <div id="Kotlin" class="w3-container city" style="display:none">
                 <h2>London</h2>
                 <p>London is the capital city of England.</p>
               </div>
             
-              <div id="Paris" class="w3-container city" style="display:none">
+              <div id="Swift" class="w3-container city" style="display:none">
                 <h2>Paris</h2>
                 <p>Paris is the capital of France.</p> 
               </div>
             
-              <div id="Tokyo" class="w3-container city" style="display:none">
+              <div id="Python" class="w3-container city" style="display:none">
                 <h2>Tokyo</h2>
                 <p>Tokyo is the capital of Japan.</p>
               </div>
-            </div>  
-              <!-- <div class="tabs-code">
-              <ul class="tabs-nav-code">
-                <li><a href="#tab-1">Features</a></li>
-                <li><a href="#tab-2">Details</a></li>
-              </ul>
-              <div class="tabs-stage-code">
-                <div id="tab-1">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec neque nisi, dictum aliquet lectus.</p>
-                </div>
-                <div id="tab-2">
-                  <p>Phasellus pharetra aliquet viverra. Donec scelerisque tincidunt diam, eu fringilla urna auctor at.</p>
-                </div>
-              </div> -->
-              <!-- <div class="w3-bar w3-border w3-light-grey">
-                <a href="#" class="w3-bar-item w3-button w3-green">Home</a>
-                <a href="#" class="w3-bar-item w3-button"onclick="openCity('London')">London</a>
-                <a href="#" class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</a>
-                <a href="#" class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</a>
-              </div>
-              <div id="London" class="city">
-                <h2>London</h2>
-                <p>London is the capital of England.</p>
-              </div>
-              
-              <div id="Paris" class="city" style="display:none">
-                <h2>Paris</h2>
-                <p>Paris is the capital of France.</p> 
-              </div>
-              
-              <div id="Tokyo" class="city" style="display:none">
+              <div id="CSharp" class="w3-container city" style="display:none">
                 <h2>Tokyo</h2>
                 <p>Tokyo is the capital of Japan.</p>
-              </div> -->
-          <!-- </div> -->
+              </div>
+              <div id="TScript" class="w3-container city" style="display:none">
+                <h2>Tokyo</h2>
+                <p>Tokyo is the capital of Japan.</p>
+              </div>
+            </div>
         </div>
       </div>
     </section>
@@ -1135,20 +1115,7 @@
         }
       }
       window.document.addEventListener("scroll", onScroll);
-
-      function openCity(evt, cityName) {
-        var i, x, tablinks;
-        x = document.getElementsByClassName("city");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < x.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.firstElementChild.className += " w3-border-red";
-      }
+      
     </script>
   </body>
 </html>
