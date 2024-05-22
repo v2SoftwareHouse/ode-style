@@ -359,7 +359,21 @@
             </div>
           </div>
 
-          <div class="ud-about-image">
+          <div class="tabs">
+            <ul class="tabs-nav">
+              <li><a href="#tab-1">Features</a></li>
+              <li><a href="#tab-2">Details</a></li>
+            </ul>
+            <div class="tabs-stage">
+              <div id="tab-1">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec neque nisi, dictum aliquet lectus.</p>
+              </div>
+              <div id="tab-2">
+                <p>Phasellus pharetra aliquet viverra. Donec scelerisque tincidunt diam, eu fringilla urna auctor at.</p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="ud-about-image">
             <button class="tablink" onclick="openPage('Java', this, 'primary-color')" id="defaultOpen">Java</button>
             <button class="tablink" onclick="openPage('Python', this, 'primary-color')">Python</button>
             <button class="tablink" onclick="openPage('TypeScript', this, 'primary-color')">TypeScript</button>
@@ -369,14 +383,14 @@
             <div id="Java" class="tabcontent">
               <pre>
                 <code>
-<p style="text-align: left;">class GETUseCase(private val repo: UseCaseRepository) : 
-  UseCase() {
-    
-    override fun execute(param: String?): Output {
-      val data = repo.doFetch(param)
-      return ValueOutput(data)
-    }
-  }</p>
+                <p style="text-align: left;">class GETUseCase(private val repo: UseCaseRepository) : 
+                  UseCase() {
+                    
+                    override fun execute(param: String?): Output {
+                      val data = repo.doFetch(param)
+                      return ValueOutput(data)
+                    }
+                  }</p>
                 </code>
               </pre>
             </div>
@@ -384,14 +398,14 @@
             <div id="Python" class="tabcontent">
               <pre>
                 <code>
-<p style="text-align: left;">class GETUseCase(UseCase[str, Any]):
-  def __init__(self, repo: UseCaseRepository):
-      self.repo = repo
+                  <p style="text-align: left;">class GETUseCase(UseCase[str, Any]):
+                    def __init__(self, repo: UseCaseRepository):
+                        self.repo = repo
 
-  def execute(self, param: str) -> Output[Any]:
-      data = self.repo.do_fetch(param)
-      return ValueOutput(data)
-</p>
+                    def execute(self, param: str) -> Output[Any]:
+                        data = self.repo.do_fetch(param)
+                        return ValueOutput(data)
+                  </p>
                 </code>
               </pre>
             </div>
@@ -399,20 +413,20 @@
             <div id="CSharp" class="tabcontent">
               <pre>
                 <code>
-<p style="text-align: left;">public class GETUseCase : UseCase
-{
-    UseCaseRepository repo { get; set; }
+                  <p style="text-align: left;">public class GETUseCase : UseCase
+                  {
+                      UseCaseRepository repo { get; set; }
 
-    public GETUseCase(UseCaseRepository repo) : base() {
-        this.repo = repo;
-    }
+                      public GETUseCase(UseCaseRepository repo) : base() {
+                          this.repo = repo;
+                      }
 
-    public override Output execute(string param)
-    {
-        var data = repo.doFetch();
-        return new ValueOutput(data);
-    }
-}</p>
+                      public override Output execute(string param)
+                      {
+                          var data = repo.doFetch();
+                          return new ValueOutput(data);
+                      }
+                  }</p>
                 </code>
               </pre>
             </div>
@@ -420,18 +434,18 @@
             <div id="Swift" class="tabcontent">
               <pre>
                 <code>
-<p style="text-align: left;">class GETUseCase : UseCase {
-  var repo: UseCaseRepository
-  
-  init(repo: UseCaseRepository) {
-      self.repo = repo
-  }
-  
-  override func execute(param: String?) -> Output {
-      let data = repo.doFetch(name: param)
-      return ValueOutput(value: data)
-  }
-}</p>
+                  <p style="text-align: left;">class GETUseCase : UseCase {
+                    var repo: UseCaseRepository
+                    
+                    init(repo: UseCaseRepository) {
+                        self.repo = repo
+                    }
+                    
+                    override func execute(param: String?) -> Output {
+                        let data = repo.doFetch(name: param)
+                        return ValueOutput(value: data)
+                    }
+                  }</p>
                 </code>
               </pre>
             </div>
@@ -439,22 +453,22 @@
             <div id="TypeScript" class="tabcontent">
               <pre>
                 <code>
-<p style="text-align: left;">class GETUseCase implements UseCase {
-  private repo: UseCaseRepository;
+                  <p style="text-align: left;">class GETUseCase implements UseCase {
+                    private repo: UseCaseRepository;
 
-  constructor(repo: UseCaseRepository) {
-      this.repo = repo;
-  }
+                    constructor(repo: UseCaseRepository) {
+                        this.repo = repo;
+                    }
 
-  execute(param: string): Output {
-      const data = this.repo.do_fetch(param);
-      return new ValueOutput(data);
-  }
-}</p>
+                    execute(param: string): Output {
+                        const data = this.repo.do_fetch(param);
+                        return new ValueOutput(data);
+                    }
+                  }</p>
                 </code>
               </pre>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -1166,43 +1180,19 @@
       }
       window.document.addEventListener("scroll", onScroll);
 
-      function openPage(pageName, elmnt, color) {
-        // Hide all elements with class="tabcontent" by default */
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
+      // Show the first tab by default
+      $('.tabs-stage div').hide();
+      $('.tabs-stage div:first').show();
+      $('.tabs-nav li:first').addClass('tab-active');
 
-        // Remove the background color of all tablinks/buttons
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].style.backgroundColor = "";
-        }
-
-        // Show the specific tab content
-        document.getElementById(pageName).style.display = "block";
-
-        // Add the specific color to the button used to open the tab content
-        elmnt.style.backgroundColor = color;
-      }
-
-      // Get the element with id="defaultOpen" and click on it
-      window.document.getElementById("defaultOpen").click();
-
-      function sendEmail() {
-        Email.send({
-          SecureToken : "78fedf22-fb70-43e1-8d52-69a336fe772f",
-          To : 'v2.softwarehouse@gmail.com',
-          From : 'v2.softwarehouse@gmail.com',
-          Subject : 'This is the subject',
-          Body : 'And this is the body'
-        }).then(function (message) {
-            alert(message)
-        }).catch(function (e) {
-            alert(e);
-        });
-      }
+      // Change tab class and display content
+      $('.tabs-nav a').on('click', function(event){
+        event.preventDefault();
+        $('.tabs-nav li').removeClass('tab-active');
+        $(this).parent().addClass('tab-active');
+        $('.tabs-stage div').hide();
+        $($(this).attr('href')).show();
+      });
     </script>
   </body>
 </html>

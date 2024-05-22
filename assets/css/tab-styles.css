@@ -1,38 +1,46 @@
-/* Set height of body and the document to 100% to enable "full page tabs" */
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial;
+body {
+  color: #666;
+  font: 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
 }
-
-/* Style tab links */
-.tablink {
-  background-color: #556ec2;
-  color: white;
+.tabs {
+  max-width: 538px;
+}
+.tabs-nav li {
   float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: min-content;
+  width: 50%;
 }
-
-.tablink:hover {
-  background-color: #3056d3;
+.tabs-nav li:first-child a {
+  border-right: 0;
+  border-top-left-radius: 6px;
 }
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: white;
-  display: none;
-  padding: 100px 20px;
-  height: min-content;
-  width: min-content;
+.tabs-nav li:last-child a {
+  border-top-right-radius: 6px;
 }
-
-#Java {background-color: white;}
-#Python {background-color: white;}
-#CSharp {background-color: white;}
-#Swift {background-color: white;}
-#TypeScript {background-color: white;}
+a {
+  background: #eaeaed;
+  border: 1px solid #cecfd5;
+  color: #0087cc;
+  display: block;
+  font-weight: 600;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff7b29;
+}
+.tab-active a {
+  background: #fff;
+  border-bottom-color: transparent;
+  color: #2db34a;
+  cursor: default;
+}
+.tabs-stage {
+  border: 1px solid #cecfd5;
+  border-radius: 0 0 6px 6px;
+  border-top: 0;
+  clear: both;
+  padding: 24px 30px;
+  position: relative;
+  top: -1px;
+}
