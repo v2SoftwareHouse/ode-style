@@ -360,12 +360,12 @@
           </div>
 
           <div class="ud-about-image">
-              <div class="tabs">
-              <ul class="tabs-nav">
+              <div class="tabs-code">
+              <ul class="tabs-nav-code">
                 <li><a href="#tab-1">Features</a></li>
                 <li><a href="#tab-2">Details</a></li>
               </ul>
-              <div class="tabs-stage">
+              <div class="tabs-stage-code">
                 <div id="tab-1">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec neque nisi, dictum aliquet lectus.</p>
                 </div>
@@ -374,102 +374,6 @@
                 </div>
               </div>
           </div>
-          <!-- 
-            <button class="tablink" onclick="openPage('Java', this, 'primary-color')" id="defaultOpen">Java</button>
-            <button class="tablink" onclick="openPage('Python', this, 'primary-color')">Python</button>
-            <button class="tablink" onclick="openPage('TypeScript', this, 'primary-color')">TypeScript</button>
-            <button class="tablink" onclick="openPage('Swift', this, 'primary-color')">Swift</button>
-            <button class="tablink" onclick="openPage('CSharp', this, 'primary-color')">C#</button>
-
-            <div id="Java" class="tabcontent">
-              <pre>
-                <code>
-                <p style="text-align: left;">class GETUseCase(private val repo: UseCaseRepository) : 
-                  UseCase() {
-                    
-                    override fun execute(param: String?): Output {
-                      val data = repo.doFetch(param)
-                      return ValueOutput(data)
-                    }
-                  }</p>
-                </code>
-              </pre>
-            </div>
-
-            <div id="Python" class="tabcontent">
-              <pre>
-                <code>
-                  <p style="text-align: left;">class GETUseCase(UseCase[str, Any]):
-                    def __init__(self, repo: UseCaseRepository):
-                        self.repo = repo
-
-                    def execute(self, param: str) -> Output[Any]:
-                        data = self.repo.do_fetch(param)
-                        return ValueOutput(data)
-                  </p>
-                </code>
-              </pre>
-            </div>
-
-            <div id="CSharp" class="tabcontent">
-              <pre>
-                <code>
-                  <p style="text-align: left;">public class GETUseCase : UseCase
-                  {
-                      UseCaseRepository repo { get; set; }
-
-                      public GETUseCase(UseCaseRepository repo) : base() {
-                          this.repo = repo;
-                      }
-
-                      public override Output execute(string param)
-                      {
-                          var data = repo.doFetch();
-                          return new ValueOutput(data);
-                      }
-                  }</p>
-                </code>
-              </pre>
-            </div>
-
-            <div id="Swift" class="tabcontent">
-              <pre>
-                <code>
-                  <p style="text-align: left;">class GETUseCase : UseCase {
-                    var repo: UseCaseRepository
-                    
-                    init(repo: UseCaseRepository) {
-                        self.repo = repo
-                    }
-                    
-                    override func execute(param: String?) -> Output {
-                        let data = repo.doFetch(name: param)
-                        return ValueOutput(value: data)
-                    }
-                  }</p>
-                </code>
-              </pre>
-            </div>
-
-            <div id="TypeScript" class="tabcontent">
-              <pre>
-                <code>
-                  <p style="text-align: left;">class GETUseCase implements UseCase {
-                    private repo: UseCaseRepository;
-
-                    constructor(repo: UseCaseRepository) {
-                        this.repo = repo;
-                    }
-
-                    execute(param: string): Output {
-                        const data = this.repo.do_fetch(param);
-                        return new ValueOutput(data);
-                    }
-                  }</p>
-                </code>
-              </pre>
-            </div>
-          </div> -->
         </div>
       </div>
     </section>
