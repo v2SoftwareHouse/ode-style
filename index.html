@@ -382,26 +382,71 @@
               </div>
             
               <div id="Kotlin" class="w3-container city" style="display:none">
-                <h2>London</h2>
-                <p>London is the capital city of England.</p>
+                <p><code>
+                  class GETUseCase(private val repo: UseCaseRepository) 
+                  : UseCase<String, Any>() {
+                
+                      override fun execute(param: String?): Output<Any> {
+                          val fetch = repo.doFetch(param)
+                          return ValueOutput(fetch)
+                      }
+                  }
+                </code></p>
               </div>
             
               <div id="Swift" class="w3-container city" style="display:none">
-                <h2>Paris</h2>
-                <p>Paris is the capital of France.</p> 
+                <p><code>
+                  class GETUseCase : UseCase<String, Any> {
+                    var repo: UseCaseRepository
+                    
+                    init(repo: UseCaseRepository) {
+                        self.repo = repo
+                    }
+                    
+                    override func execute(param: String?) -> Output<Any> {
+                        let fetch = repo.doFetch(name: param)
+                        return ValueOutput<Any>(value: fetch)
+                    }
+                  }
+              </code></p> 
               </div>
             
               <div id="Python" class="w3-container city" style="display:none">
-                <h2>Tokyo</h2>
-                <p>Tokyo is the capital of Japan.</p>
+                <p><code>
+                  class GETAPIUseCase(UseCase[int, HousesToReturn]):
+                    def __init__(self, repo: RepositoryAPI):
+                        self.repo = repo
+
+                    def execute(self, param: int) -> Output[HousesToReturn]:
+                        print("GETAPIUseCase.execute")
+                        site = self.repo.do_fetch(page=param)
+                        houses = self.repo.read_tags_from_site(site)
+                        
+                        return ValueOutput(HousesToReturn(houses))
+                  </code></p>
               </div>
+
               <div id="CSharp" class="w3-container city" style="display:none">
-                <h2>Tokyo</h2>
-                <p>Tokyo is the capital of Japan.</p>
+                <p><code>
+                  public class GETUseCase : UseCase<string, Any>
+                  {
+                      UseCaseRepository repo { get; set; }
+                  
+                      public UnitGET(UseCaseRepository repo) : base() {
+                          this.repo = repo;
+                      }
+                  
+                      public override Output<Any> execute(string param)
+                      {
+                          var fetch = repo.doFetch();
+                          return new ValueOutput<Any>(fetch);
+                      }
+                  }
+                </code></p>
               </div>
+
               <div id="TScript" class="w3-container city" style="display:none">
-                <h2>Tokyo</h2>
-                <p>Tokyo is the capital of Japan.</p>
+                
               </div>
             </div>
         </div>
