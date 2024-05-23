@@ -382,16 +382,18 @@
               </div>
             
               <div id="Kotlin" class="w3-container city" style="display:none">
-                <p>
-                  class GETUseCase(private val repo: UseCaseRepository) 
-                  : UseCase<String, Any>() {
-                
-                      override fun execute(param: String?): Output<Any> {
-                          val fetch = repo.doFetch(param)
-                          return ValueOutput(fetch)
-                      }
-                  }
-                </p>
+                <pre>
+                  <code>
+                    class GETUseCase(private val repo: UseCaseRepository) 
+                    : UseCase<String, Any>() {
+                  
+                        override fun execute(param: String?): Output<Any> {
+                            val fetch = repo.doFetch(param)
+                            return ValueOutput(fetch)
+                        }
+                    }
+                  </code>
+                </pre>
               </div>
             
               <div id="Swift" class="w3-container city" style="display:none">
