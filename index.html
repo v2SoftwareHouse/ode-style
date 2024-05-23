@@ -363,24 +363,87 @@
 
           <div style="padding: 7px; width: 70%; margin-top: 70px;">
             <div class="w3-bar w3-blue" style="margin-top: 70px; margin-right: 30px;">
-              <button class="w3-bar-item w3-button" onclick="openPage('London')">London</button>
-              <button class="w3-bar-item w3-button" onclick="openPage('Paris')">Paris</button>
-              <button class="w3-bar-item w3-button" onclick="openPage('Tokyo')">Tokyo</button>
+              <button class="w3-bar-item w3-button" onclick="openPage('Kotlin')">Kotlin</button>
+              <button class="w3-bar-item w3-button" onclick="openPage('Swift')">Swift</button>
+              <button class="w3-bar-item w3-button" onclick="openPage('Python')">Python</button>
+              <button class="w3-bar-item w3-button" onclick="openPage('CSharp')">.NET C#</button>
+              <button class="w3-bar-item w3-button" onclick="openPage('TScript')">TypeScript</button>
             </div>
 
-            <div id="London" class="w3-container city">
-              <h2>London</h2>
-              <p>London is the capital city of England.</p>
+            <div id="Kotlin" class="w3-container city" id="defaultOpen">
+              <pre>
+                <code>
+class GETUseCase(private val repo: UseCaseRepository) 
+: UseCase<String, Any>() {
+
+  override fun execute(param: String?): Output<Any> {
+      val fetch = repo.doFetch(param)
+      return ValueOutput(fetch)
+  }
+}
+                </code>
+              </pre>
+            </div>
+          
+            <div id="Swift" class="w3-container city" style="display:none">
+              <pre>
+                <code>
+class GETUseCase : UseCase<String, Any> {
+  var repo: UseCaseRepository
+
+  init(repo: UseCaseRepository) {
+      self.repo = repo
+  }
+
+  override func execute(param: String?) -> Output<Any> {
+      let fetch = repo.doFetch(name: param)
+      return ValueOutput<Any>(value: fetch)
+  }
+}
+                </code>
+              </pre> 
+            </div>
+          
+            <div id="Python" class="w3-container city" style="display:none">
+              <pre>
+                <code>
+class GETAPIUseCase(UseCase[int, HousesToReturn]):
+  def __init__(self, repo: RepositoryAPI):
+    self.repo = repo
+
+  def execute(self, param: int) -> Output[HousesToReturn]:
+    print("GETAPIUseCase.execute")
+    site = self.repo.do_fetch(page=param)
+    houses = self.repo.read_tags_from_site(site)
+    
+    return ValueOutput(HousesToReturn(houses))
+                </code>
+              </pre> 
             </div>
 
-            <div id="Paris" class="w3-container city" style="display:none">
-              <h2>Paris</h2>
-              <p>Paris is the capital of France.</p> 
+            <div id="CSharp" class="w3-container city" style="display:none">
+              <pre>
+                <code>
+public class GETUseCase : UseCase<string, Any>
+{
+  UseCaseRepository repo { get; set; }
+
+  public UnitGET(UseCaseRepository repo) : base() {
+      this.repo = repo;
+  }
+
+  public override Output<Any> execute(string param)
+  {
+      var fetch = repo.doFetch();
+      return new ValueOutput<Any>(fetch);
+  }
+}
+                </code>
+              </pre>
             </div>
 
-            <div id="Tokyo" class="w3-container city" style="display:none">
-              <h2>Tokyo</h2>
-              <p>Tokyo is the capital of Japan.</p>
+            <div id="TScript" class="w3-container city" style="display:none">
+              
             </div>
           </div>
         </div>
