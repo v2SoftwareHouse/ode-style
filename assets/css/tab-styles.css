@@ -1,34 +1,31 @@
-.tabs-code {
-  max-width: 538px;
-}
-
-.tabs-nav-code li {
+/* Style the tab buttons */
+.tablink {
+  background-color: #555;
+  color: white;
   float: left;
-  width: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
 }
 
-.tabs-nav-code li:first-child a {
-  border-right: 0;
-  border-top-left-radius: 6px;
+/* Change background color of buttons on hover */
+.tablink:hover {
+  background-color: #777;
 }
 
-.tabs-nav-code li:last-child a {
-  border-top-right-radius: 6px;
+/* Set default styles for tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
 }
 
-.tab-active-code a {
-  background: #fff;
-  border-bottom-color: transparent;
-  color: #2db34a;
-  cursor: default;
-}
-
-.tabs-stage-code {
-  border: 1px solid #cecfd5;
-  border-radius: 0 0 6px 6px;
-  border-top: 0;
-  clear: both;
-  padding: 24px 30px;
-  position: relative;
-  top: -1px;
-}
+/* Style each tab content individually */
+#London {background-color:red;}
+#Paris {background-color:green;}
+#Tokyo {background-color:blue;}
+#Oslo {background-color:orange;}

@@ -362,7 +362,36 @@
           </div>
 
           <div style="padding: 7px; width: 70%; margin-top: 70xp;">
-            <div class="w3-container">
+            <div id="London" class="tabcontent">
+              <h1>London</h1>
+              <p>London is the capital city of England.</p>
+            </div>
+            
+            <div id="Paris" class="tabcontent">
+              <h1>Paris</h1>
+              <p>Paris is the capital of France.</p>
+            </div>
+            
+            <div id="Tokyo" class="tabcontent">
+              <h1>Tokyo</h1>
+              <p>Tokyo is the capital of Japan.</p>
+            </div>
+            
+            <div id="Oslo" class="tabcontent">
+              <h1>Oslo</h1>
+              <p>Oslo is the capital of Norway.</p>
+            </div>
+            
+            <button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen">London</button>
+            <button class="tablink" onclick="openCity('Paris', this, 'green')">Paris</button>
+            <button class="tablink" onclick="openCity('Tokyo', this, 'blue')">Tokyo</button>
+            <button class="tablink" onclick="openCity('Oslo', this, 'orange')">Oslo</button>
+            
+            
+            
+            <!-- <div class="w3-container">
+
+
               <div class="w3-row">
                 <a href="javascript:void(0)" onclick="openPage(event, 'Kotlin');">
                   <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Kotlin</div>
@@ -456,7 +485,7 @@ public class GETUseCase : UseCase<string, Any>
               <div id="TScript" class="w3-container city" style="display:none">
                 
               </div>
-            </div>
+            </div> -->
         </div>
       </div>
     </section>
@@ -1168,6 +1197,8 @@ public class GETUseCase : UseCase<string, Any>
         }
       }
       window.document.addEventListener("scroll", onScroll);
+      
+      // Get the element with id="defaultOpen" and click on it
       document.getElementById("defaultOpen").click();
     </script>
   </body>
