@@ -397,54 +397,60 @@ class GETUseCase(private val repo: UseCaseRepository)
               </div>
             
               <div id="Swift" class="w3-container city" style="display:none">
-                <p><code>
-                  class GETUseCase : UseCase<String, Any> {
-                    var repo: UseCaseRepository
-                    
-                    init(repo: UseCaseRepository) {
-                        self.repo = repo
-                    }
-                    
-                    override func execute(param: String?) -> Output<Any> {
-                        let fetch = repo.doFetch(name: param)
-                        return ValueOutput<Any>(value: fetch)
-                    }
-                  }
-              </code></p> 
+                <pre>
+                  <code>
+class GETUseCase : UseCase<String, Any> {
+  var repo: UseCaseRepository
+  
+  init(repo: UseCaseRepository) {
+      self.repo = repo
+  }
+  
+  override func execute(param: String?) -> Output<Any> {
+      let fetch = repo.doFetch(name: param)
+      return ValueOutput<Any>(value: fetch)
+  }
+}
+                  </code>
+                </pre> 
               </div>
             
               <div id="Python" class="w3-container city" style="display:none">
-                <p><code>
-                  class GETAPIUseCase(UseCase[int, HousesToReturn]):
-                    def __init__(self, repo: RepositoryAPI):
-                        self.repo = repo
+                <pre>
+                  <code>
+class GETAPIUseCase(UseCase[int, HousesToReturn]):
+def __init__(self, repo: RepositoryAPI):
+    self.repo = repo
 
-                    def execute(self, param: int) -> Output[HousesToReturn]:
-                        print("GETAPIUseCase.execute")
-                        site = self.repo.do_fetch(page=param)
-                        houses = self.repo.read_tags_from_site(site)
-                        
-                        return ValueOutput(HousesToReturn(houses))
-                  </code></p>
+def execute(self, param: int) -> Output[HousesToReturn]:
+    print("GETAPIUseCase.execute")
+    site = self.repo.do_fetch(page=param)
+    houses = self.repo.read_tags_from_site(site)
+    
+    return ValueOutput(HousesToReturn(houses))
+                  </code>
+                </pre> 
               </div>
 
               <div id="CSharp" class="w3-container city" style="display:none">
-                <p><code>
-                  public class GETUseCase : UseCase<string, Any>
-                  {
-                      UseCaseRepository repo { get; set; }
-                  
-                      public UnitGET(UseCaseRepository repo) : base() {
-                          this.repo = repo;
-                      }
-                  
-                      public override Output<Any> execute(string param)
-                      {
-                          var fetch = repo.doFetch();
-                          return new ValueOutput<Any>(fetch);
-                      }
-                  }
-                </code></p>
+                <pre>
+                  <code>
+public class GETUseCase : UseCase<string, Any>
+{
+    UseCaseRepository repo { get; set; }
+
+    public UnitGET(UseCaseRepository repo) : base() {
+        this.repo = repo;
+    }
+
+    public override Output<Any> execute(string param)
+    {
+        var fetch = repo.doFetch();
+        return new ValueOutput<Any>(fetch);
+    }
+}
+                  </code>
+                </pre>
               </div>
 
               <div id="TScript" class="w3-container city" style="display:none">
