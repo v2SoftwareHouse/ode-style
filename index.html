@@ -374,14 +374,14 @@
                   <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Python</div>
                 </a>
                 <a href="javascript:void(0)" onclick="openPage(event, 'CSharp');">
-                  <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">C#</div>
+                  <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">.NET C#</div>
                 </a>
                 <a href="javascript:void(0)" onclick="openPage(event, 'TScript');">
                   <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">TypeScript</div>
                 </a>
               </div>
             
-              <div id="Kotlin" class="w3-container city">
+              <div id="Kotlin" class="w3-container city" id="defaultOpen">
                 <pre>
                   <code>
 class GETUseCase(private val repo: UseCaseRepository) 
@@ -1168,7 +1168,7 @@ public class GETUseCase : UseCase<string, Any>
         }
       }
       window.document.addEventListener("scroll", onScroll);
-      
+      document.getElementById("defaultOpen").click();
     </script>
   </body>
 </html>
